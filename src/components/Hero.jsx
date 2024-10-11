@@ -39,7 +39,7 @@ const Hero = () => {
   });
   return (
     <>
-      <div className="grid grid-rows-16 grid-cols-8 overflow-hidden gap-2 w-full bg-[#846c65] relative min-h-fit">
+      <div className="grid grid-rows-16 grid-cols-8 overflow-hidden gap-2 w-full bg-[#9ea2e3] relative min-h-fit">
         {images.map((image) => {
           return (
             <div

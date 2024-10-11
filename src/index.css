@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+body{
+  background: linear-gradient(90deg, #1c1c1c, #1c1c1c88);
+}
+
 .grid> div {
     grid-row : var(--r);
     grid-column : var(--c);

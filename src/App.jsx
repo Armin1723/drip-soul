@@ -7,14 +7,28 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import { images } from "./utils";
 import Shop from "./pages/Shop";
+import Lenis from "lenis";
 
 const App = () => {
 
   useEffect(() => {
-    images.map((image) => {
-      const img = new Image();
-      img.src = `images/${image.src}`;
-    });
+    // images.map((image) => {
+    //   const img = new Image();
+    //   img.src = `images/${image.src}`;
+    // });
+
+    const lenis = new Lenis()
+    lenis.on('scroll', (e) => {
+      console.log(e)
+    })
+
+    function raf(time){
+      lenis.raf(time)
+      requestAnimationFrame(raf)
+    }
+
+    requestAnimationFrame(raf)
+
   });
 
   return (

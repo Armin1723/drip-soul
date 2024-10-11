@@ -5,6 +5,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import { Link } from "react-router-dom";
 
+
 const Hero = () => {
   gsap.registerPlugin(ScrollTrigger);
 

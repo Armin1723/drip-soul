@@ -21,7 +21,7 @@ const Testimonials = () => {
   return (
       <div className="page w-full h-screen z-[2] bg-blue-300 flex items-center ">
         <div className="container my-[25vh] border-t border-b shadow-[0_0_25px_#c1c1c1] flex">
-          <h2 className="feature text-[25vw] font-bold uppercase px-4">
+          <h2 className="feature text-[25vw] max-sm:text-[30vh] font-bold uppercase px-4">
             Testimonials
           </h2>
         </div>

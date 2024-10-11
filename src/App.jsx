@@ -1,20 +1,27 @@
-import Footer from './components/Footer'
-import Hero from './components/Hero'
-import Testimonials from './components/Testimonials'
-import TrendingBlogs from './components/TrendingBlogs'
-import './index.css'
-
-import React from 'react'
+import "./index.css";
+import React, { useEffect } from "react";
+import Homepage from "./pages/Homepage";
+import { images } from "./utils";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Captcha from "./pages/Captcha";
 
 const App = () => {
+  useEffect(() => {
+    images.map((image) => {
+      const img = new Image();
+      img.src = `images/${image.src}`;
+    });
+  });
   return (
-    <div className='flex flex-col'>
-      <Hero />
-      <TrendingBlogs />
-      <Testimonials />
-      <Footer />
-    </div>
-  )
-}
+    <BrowserRouter>
+      <div className="flex flex-col overflow-x-hidden">
+        <Routes>
+          <Route path="/" element={<Homepage />} />
+          <Route path="/captcha" element={<Captcha />} />
+        </Routes>
+      </div>
+    </BrowserRouter>
+  );
+};
 
-export default App
+export default App;

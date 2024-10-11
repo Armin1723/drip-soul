@@ -45,13 +45,13 @@ const Captcha = () => {
   };
   return (
     <div className="container flex h-screen w-screen justify-center items-start">
-      <div className="captchaBox bg-gray-300 flex gap-4 justify-between items-center border-2 rounded-lg mt-12 p-4 px-12 border-gray-700 shadow-[0_0_25px#1c1c1c]">
+      <div className="captchaBox hover:shadow-[0_0_50px_#1c1c1c] bg-gray-300 flex gap-4 justify-between items-center border-2 rounded-lg mt-12 p-4 px-12 border-gray-700 shadow-[0_0_25px#1c1c1c]">
         <div className="flex rounded-lg border-lg justify-center items-center p-2">
           {state.isLoading ? (
             <Loader />
           ) : (
             <div
-              className="rounded-lg border border-black w-6 aspect-square"
+              className="rounded-lg border border-black w-6 aspect-square cursor-pointer"
               onClick={() => startVerification()}
             ></div>
           )}

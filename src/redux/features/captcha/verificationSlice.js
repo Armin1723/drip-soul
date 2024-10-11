@@ -1,7 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit"
 
 const localVerificationData = localStorage.getItem('isVerified')
-console.log(localVerificationData)
 
 const verificationSlice = createSlice({
     name : 'isVerified',
